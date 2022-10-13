@@ -2,6 +2,9 @@ const uniqueCounter = (arr) => {
   // check for an empty arr and return 0
   if(arr.length === 0) return 0;
 
+  // sort the array
+  arr.sort((a, b) => a - b);
+
   // initialize the first pointer
   let i = 0;
 
@@ -19,4 +22,4 @@ const uniqueCounter = (arr) => {
   return i + 1;
 };
 
-console.log(uniqueCounter([1, 2, 2, 3, 4, 5, 7]));
+console.log(uniqueCounter([1, 2, 3, 4, 5, 7, 2]));
